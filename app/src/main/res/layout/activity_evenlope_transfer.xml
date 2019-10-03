@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewEnvelopeDetails">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/envelopeTransferTitleBarTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#4AC38B"
+                android:gravity="center_horizontal"
+                android:text="TRANSFER"
+                android:textAllCaps="true"
+                android:textColor="#F8F1F1"
+                android:textSize="38sp" />
+
+        <TextView
+            android:id="@+id/envelopeTransferFromEnvelopeTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="From Account: " />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/envelopeTransferToTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transfer to envelope:" />
+
+            <Spinner
+                android:id="@+id/envelopeTransferToEnvelopeSpinner"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/envelopeTransferAmountET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberDecimal|numberSigned"
+                android:digits="0123456789-."
+                android:text=""
+                android:hint="Amount"
+                android:layout_weight="1"
+                />
+
+            <Button
+                android:id="@+id/envelopeTransferSubmitButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/envelopeTransferMainMenuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Main Menu" />
+
+        <Button
+            android:id="@+id/envelopeTransferBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Back" />
+
+
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
